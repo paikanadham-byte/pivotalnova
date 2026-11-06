@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pivotal Nova — Websites, Web Apps &amp; Mobile Apps, Built to Spec</title>
+<meta name="description" content="Pivotal Nova is a software development studio building websites, web apps and mobile apps for every type of brand. We build your first version first — you only pay if you like it.">
+<link rel="canonical" href="https://pivotalnova.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pivotal Nova — Software, Built to Spec">
+<meta property="og:description" content="Websites, web apps and mobile apps for every type of brand. First version built before you pay anything.">
+<meta property="og:url" content="https://pivotalnova.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Pivotal Nova","url":"https://pivotalnova.com","email":"paikanadham@gmail.com","description":"Software development studio building websites, web apps and mobile apps for every type of brand.","areaServed":["United Kingdom","Canada","United States","Worldwide"]}
+</script>
+<style>
+:root{
+  --paper:#F6F6F2; --ink:#101216; --cobalt:#2237E6; --hairline:#D8D8D0; --muted:#55575E;
+  --fd:"Space Grotesk",sans-serif; --fb:"Manrope",sans-serif; --fm:"IBM Plex Mono",monospace;
+  --max:1240px; --pad:clamp(20px,4.5vw,52px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);line-height:1.04;margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--cobalt)}
+img,svg{display:block}
+::selection{background:var(--cobalt);color:var(--paper)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.mono{font-family:var(--fm)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:60;font-family:var(--fm);font-size:13px}
+.skip:focus{left:12px;top:12px}
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--hairline)}
+.head-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:66px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand-name{font-family:var(--fd);font-weight:700;font-size:18px;letter-spacing:.04em}
+.brand-name em{font-style:normal;color:var(--cobalt)}
+.main-nav{display:flex;gap:26px;margin-left:auto}
+.main-nav a{font-family:var(--fm);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent}
+.main-nav a:hover{color:var(--ink)}
+.main-nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--cobalt)}
+.head-cta{margin-left:8px;background:var(--cobalt);color:var(--paper);text-decoration:none;font-family:var(--fm);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:11px 18px;white-space:nowrap}
+.head-cta:hover{background:var(--ink)}
+/* ---------- shared bits ---------- */
+.sec-head{display:flex;align-items:center;gap:14px;font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+.sec-head .plus{color:var(--cobalt);font-size:17px;line-height:1}
+.sec-head b{color:var(--ink);font-weight:500}
+.sec-head::after{content:"";flex:1;height:1px;background:var(--hairline)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cobalt);color:var(--paper);text-decoration:none;font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:15px 26px;border:1px solid var(--cobalt);cursor:pointer}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+section.block{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--hairline)}
+.grid-bg{background-image:linear-gradient(to right,rgba(16,18,22,.055) 1px,transparent 1px),linear-gradient(to bottom,rgba(16,18,22,.055) 1px,transparent 1px);background-size:44px 44px}
+.plusmark{position:absolute;font-family:var(--fm);color:var(--cobalt);font-size:18px;line-height:1;user-select:none}
+/* ---------- hero ---------- */
+.hero{position:relative;border-bottom:1px solid var(--hairline);padding:clamp(48px,7vw,84px) 0 clamp(52px,7vw,80px);overflow:hidden}
+.hero-top{display:flex;justify-content:space-between;gap:16px;font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hairline);padding-bottom:14px;margin-bottom:clamp(30px,4vw,48px)}
+.hero-top .r{text-align:right}
+.hero h1{font-size:clamp(2.9rem,7.2vw,5.6rem);max-width:12ch}
+.hero h1 .co{color:var(--cobalt)}
+.hero-sub{max-width:56ch;color:var(--muted);font-size:clamp(1.05rem,1.6vw,1.22rem);margin-top:22px}
+.hero-sub strong{color:var(--ink)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+/* services index (signature) */
+.svc-zone{margin-top:clamp(44px,6vw,72px);border-top:1px solid var(--ink)}
+.svc-zone-label{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.svc-grid{display:grid;grid-template-columns:1.15fr .85fr;border-top:1px solid var(--hairline)}
+.svc-list{display:flex;flex-direction:column}
+.svc-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:18px;padding:26px 18px 26px 6px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--hairline);position:relative}
+.svc-row .no{font-family:var(--fm);font-size:14px;color:var(--muted)}
+.svc-row .nm{font-family:var(--fd);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1}
+.svc-row .tag{display:block;font-family:var(--fb);font-weight:500;font-size:15px;color:var(--muted);margin-top:6px}
+.svc-row .arr{font-family:var(--fm);font-size:20px;color:var(--muted);transition:transform .25s ease,color .25s ease}
+.svc-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--cobalt);transform:scaleY(0);transition:transform .25s ease}
+.svc-row:hover .arr,.svc-row:focus-visible .arr{transform:translateX(5px);color:var(--cobalt)}
+.svc-row.active::before{transform:scaleY(1)}
+.svc-row.active .no{color:var(--cobalt)}
+.svc-panel-col{border-left:1px solid var(--hairline);padding:8px 0 8px clamp(20px,3vw,40px)}
+.spec-panel{padding:18px 0 10px}
+.spec-panel .spec-id{font-family:var(--fm);font-size:12px;letter-spacing:.16em;color:var(--cobalt);text-transform:uppercase}
+.spec-panel h3{font-size:1.45rem;margin:10px 0 16px}
+.spec-table{width:100%;border-collapse:collapse;font-size:15px}
+.spec-table th{font-family:var(--fm);font-weight:500;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:11px 14px 11px 0;border-top:1px solid var(--hairline);vertical-align:top;width:118px}
+.spec-table td{padding:11px 0;border-top:1px solid var(--hairline);color:var(--ink)}
+.spec-panel .spec-link{display:inline-block;margin-top:16px;font-family:var(--fm);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--cobalt);padding-bottom:3px;color:var(--ink)}
+.spec-panel .spec-link:hover{color:var(--cobalt)}
+.js .spec-panel{display:none}
+.js .spec-panel.active{display:block}
+/* ---------- offer band ---------- */
+.offer{background:var(--ink);color:var(--paper)}
+.offer .sec-head{color:#9a9da6}
+.offer .sec-head b{color:var(--paper)}
+.offer .sec-head::after{background:#2c2e35}
+.offer h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:20ch}
+.offer h2 .co{color:#8FA2FF}
+.offer-points{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid #2c2e35}
+.offer-points div{padding:24px 26px 6px 0;border-right:1px solid #2c2e35}
+.offer-points div:last-child{border-right:0;padding-left:26px}
+.offer-points div:nth-child(2){padding-left:26px}
+.offer-points .k{font-family:var(--fm);font-size:12px;letter-spacing:.16em;color:#8FA2FF;text-transform:uppercase}
+.offer-points p{color:#C9CBD2;margin-top:8px;font-size:15.5px}
+/* ---------- process strip ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.step{padding:22px 22px 8px 0;border-right:1px solid var(--hairline)}
+.step:last-child{border-right:0;padding-left:22px}
+.step:nth-child(2),.step:nth-child(3){padding-left:22px}
+.step .n{font-family:var(--fm);font-size:13px;color:var(--cobalt);letter-spacing:.1em}
+.step h3{font-size:1.25rem;margin:10px 0 8px}
+.step p{color:var(--muted);font-size:15.5px}
+.more-link{display:inline-block;margin-top:34px;font-family:var(--fm);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--cobalt);padding-bottom:3px}
+.more-link:hover{color:var(--cobalt)}
+/* ---------- featured work ---------- */
+.feat{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+.feat-l{padding:clamp(26px,4vw,44px);border-right:1px solid var(--hairline)}
+.feat-l .k{font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt)}
+.feat-l h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin:12px 0 14px}
+.feat-l p{color:var(--muted)}
+.feat-r{padding:clamp(26px,4vw,44px);display:flex;flex-direction:column;justify-content:center;gap:0}
+.feat-r .row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px solid var(--hairline);font-size:15px}
+.feat-r .row span:first-child{font-family:var(--fm);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.trade-line{margin-top:26px;font-family:var(--fm);font-size:12.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;line-height:2}
+/* ---------- closing ---------- */
+.closing{position:relative;text-align:left}
+.closing h2{font-size:clamp(2.2rem,5.4vw,4rem);max-width:16ch}
+.closing p{color:var(--muted);max-width:52ch;margin-top:16px}
+/* ---------- footer ---------- */
+.site-foot{background:var(--paper)}
+.foot-marks{display:flex;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px var(--pad) 0;font-family:var(--fm);color:var(--cobalt);font-size:16px}
+.foot-in{max-width:var(--max);margin:0 auto;padding:26px var(--pad) 8px;display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:36px}
+.foot-in .fb-name{font-family:var(--fd);font-weight:700;font-size:20px;letter-spacing:.04em}
+.foot-in .fb-name em{font-style:normal;color:var(--cobalt)}
+.foot-in p{color:var(--muted);font-size:15px;margin-top:8px;max-width:34ch}
+.foot-nav{display:flex;flex-direction:column;gap:9px}
+.foot-nav a{font-family:var(--fm);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.foot-nav a:hover{color:var(--cobalt)}
+.foot-contact{font-size:15px;color:var(--muted)}
+.foot-contact .mono{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:var(--ink)}
+.foot-contact a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--cobalt)}
+.foot-base{max-width:var(--max);margin:26px auto 0;padding:16px var(--pad) 26px;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+/* ---------- reveal (motion verb: plot) ---------- */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.js .reveal.in{opacity:1;transform:none}
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .svc-grid{grid-template-columns:1fr}
+  .svc-panel-col{border-left:0;border-top:1px solid var(--hairline);padding:6px 0 4px}
+  .steps{grid-template-columns:1fr 1fr}
+  .step{padding-left:0!important;border-right:0;border-top:1px solid var(--hairline);padding-top:18px}
+  .offer-points{grid-template-columns:1fr}
+  .offer-points div{border-right:0;padding-left:0!important;border-top:1px solid #2c2e35;padding-top:20px}
+  .offer-points div:first-child{border-top:0}
+  .feat{grid-template-columns:1fr}
+  .feat-l{border-right:0;border-bottom:1px solid var(--hairline)}
+  .foot-in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .main-nav{display:none}
+  .head-in{gap:14px}
+  .head-cta{margin-left:auto}
+  .hero-top .r{display:none}
+  .svc-row{grid-template-columns:44px 1fr auto;padding:20px 8px 20px 2px}
+  .steps{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="./" aria-label="Pivotal Nova — home">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="23" height="23" stroke="#2237E6" stroke-width="2"/><path d="M13 6v14M6 13h14" stroke="#2237E6" stroke-width="2"/></svg>
+      <span class="brand-name">PIVOTAL <em>NOVA</em></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="./" aria-current="page">Home</a>
+      <a href="services/">Services</a>
+      <a href="work/">Work</a>
+      <a href="about/">About</a>
+      <a href="contact/">Contact</a>
+    </nav>
+    <a class="head-cta" href="mailto:paikanadham@gmail.com">Email the studio</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <div class="hero grid-bg">
+    <span class="plusmark" style="top:14px;right:22px" aria-hidden="true">+</span>
+    <span class="plusmark" style="bottom:16px;left:22px" aria-hidden="true">+</span>
+    <div class="wrap">
+      <div class="hero-top">
+        <span>Pivotal Nova — Software Development Studio</span>
+        <span class="r">Remote-first · UK / Canada / US / Worldwide</span>
+      </div>
+      <h1>Software,<br>built to <span class="co">spec.</span></h1>
+      <p class="hero-sub">Pivotal Nova designs and builds <strong>websites, web apps and mobile apps</strong> for every type of brand. Everything is plotted before it is built — and <strong>your first version is built before you pay anything</strong>.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="contact/">Start a project</a>
+        <a class="btn ghost" href="work/">See the work</a>
+      </div>
+
+      <!-- SIGNATURE: services index -->
+      <div class="svc-zone reveal">
+        <div class="svc-zone-label"><span>Sec. 01 — The services index</span><span>Select a service to read its spec</span></div>
+        <div class="svc-grid">
+          <div class="svc-list" role="list">
+            <a class="svc-row active" href="#spec-websites" data-target="spec-websites">
+              <span class="no">/ 01</span>
+              <span><span class="nm">Websites</span><span class="tag">Your shop window on the web</span></span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+            <a class="svc-row" href="#spec-webapps" data-target="spec-webapps">
+              <span class="no">/ 02</span>
+              <span><span class="nm">Web Apps</span><span class="tag">Software your business runs on</span></span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+            <a class="svc-row" href="#spec-mobile" data-target="spec-mobile">
+              <span class="no">/ 03</span>
+              <span><span class="nm">Mobile Apps</span><span class="tag">Your business in their pocket</span></span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="svc-panel-col">
+            <div class="spec-panel active" id="spec-websites">
+              <span class="spec-id">Spec · PN-WEB-01</span>
+              <h3>Websites</h3>
+              <table class="spec-table">
+                <tr><th scope="row">Deliverable</th><td>A complete website for your business — designed around your brand, never a template.</td></tr>
+                <tr><th scope="row">Included</th><td>Custom design &amp; build · pages for services, work, about &amp; contact · booking &amp; enquiry forms · everything handled, hosting set up</td></tr>
+                <tr><th scope="row">Found by</th><td>SEO, AEO &amp; GEO foundations — built to be found in Google, search and AI answers</td></tr>
+                <tr><th scope="row">Ships as</th><td>Live on your own domain. First version built for your review — you pay only if you like it.</td></tr>
+              </table>
+              <a class="spec-link" href="services/">Full specification →</a>
+            </div>
+            <div class="spec-panel" id="spec-webapps">
+              <span class="spec-id">Spec · PN-APP-02</span>
+              <h3>Web Apps</h3>
+              <table class="spec-table">
+                <tr><th scope="row">Deliverable</th><td>A web application built around how your business actually runs — not off-the-shelf software bent into shape.</td></tr>
+                <tr><th scope="row">Included</th><td>Business-specific admin dashboard · tailored features &amp; automations · accounts and logins · your data, organised</td></tr>
+                <tr><th scope="row">Integrations</th><td>Payments, bookings, delivery — connected to the tools the app needs to work with</td></tr>
+                <tr><th scope="row">Ships as</th><td>Deployed and working end to end. First build first — payment only when you like it.</td></tr>
+              </table>
+              <a class="spec-link" href="services/">Full specification →</a>
+            </div>
+            <div class="spec-panel" id="spec-mobile">
+              <span class="spec-id">Spec · PN-MOB-03</span>
+              <h3>Mobile Apps</h3>
+              <table class="spec-table">
+                <tr><th scope="row">Deliverable</th><td>A mobile app for your customers — or for your own team — under your brand and your name.</td></tr>
+                <tr><th scope="row">Included</th><td>Designed &amp; built end to end · features and automations specced to your business · connected to your web app or dashboard</td></tr>
+                <tr><th scope="row">Works with</th><td>The same integrations as your other software — payments, bookings, delivery</td></tr>
+                <tr><th scope="row">Ships as</th><td>Built first for your review, like everything we ship — you pay only if you like it.</td></tr>
+              </table>
+              <a class="spec-link" href="services/">Full specification →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFER -->
+  <section class="block offer" style="border-bottom:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 02 — <b>The offer</b></span></div>
+      <h2 class="reveal">We build your first version. You review it. <span class="co">You only pay if you like it.</span></h2>
+      <div class="offer-points reveal">
+        <div><span class="k">/ A — Nothing upfront</span><p>No deposit, no payment before you have seen real work with your name on it.</p></div>
+        <div><span class="k">/ B — A real first build</span><p>Not a mock-up or a sales deck — a working first version of your website or app.</p></div>
+        <div><span class="k">/ C — Your call</span><p>Like it, and we refine and launch. Don’t, and you owe nothing. The risk sits with us.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 03 — <b>How a build runs</b></span></div>
+      <div class="steps reveal">
+        <div class="step"><span class="n">STEP / 01</span><h3>Discover</h3><p>We learn your business — what you sell, who it is for, and what the software has to do.</p></div>
+        <div class="step"><span class="n">STEP / 02</span><h3>First build</h3><p>We plot the spec and build the first working version — design, features and all.</p></div>
+        <div class="step"><span class="n">STEP / 03</span><h3>Review &amp; refine</h3><p>You review it properly, on phone and desktop. We refine until it is right.</p></div>
+        <div class="step"><span class="n">STEP / 04</span><h3>Launch &amp; grow</h3><p>It goes live on your domain — then keeps growing with search and AI visibility.</p></div>
+      </div>
+      <a class="more-link reveal" href="about/">The process in full →</a>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 04 — <b>From the drawing register</b></span></div>
+      <div class="feat reveal">
+        <div class="feat-l">
+          <span class="k">Featured build · Nº 01 of 12</span>
+          <h3>Northgate Barbers</h3>
+          <p>A full five-page concept build for a barbershop — home, services &amp; prices, work, about and contact — designed and built by this studio and live to open right now.</p>
+          <a class="more-link" href="https://paikanadham-byte.github.io/client-demos/northgate-barbers/" target="_blank" rel="noopener">Open the live build →</a>
+        </div>
+        <div class="feat-r">
+          <div class="row"><span>Build type</span><span>Concept build — 5 pages</span></div>
+          <div class="row"><span>Trade</span><span>Barbershop</span></div>
+          <div class="row"><span>Pages</span><span>Home · Services · Work · About · Contact</span></div>
+          <div class="row"><span>Status</span><span>Live demo</span></div>
+        </div>
+      </div>
+      <p class="trade-line reveal">Also in the register — Plumbing &amp; Heating · Roofing · Handyman · Cleaning · Landscaping · Removals · Salon &amp; Beauty · Café &amp; Bakery · Pet Grooming · Auto Detailing · Tech Repair</p>
+      <a class="more-link reveal" href="work/">Open the full register →</a>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="block closing grid-bg" style="border-bottom:0">
+    <span class="plusmark" style="top:18px;right:22px" aria-hidden="true">+</span>
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 05 — <b>Start</b></span></div>
+      <h2 class="reveal">Have something to build?</h2>
+      <p class="reveal">Tell us what your business needs. The first version gets built before you pay anything — that is the whole pitch.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn" href="contact/">Start a project</a>
+        <a class="btn ghost" href="mailto:paikanadham@gmail.com">paikanadham@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-marks" aria-hidden="true"><span>+</span><span>+</span><span>+</span></div>
+  <div class="foot-in">
+    <div>
+      <span class="fb-name">PIVOTAL <em>NOVA</em></span>
+      <p>A software development studio. Websites, web apps and mobile apps — plotted, built and shipped to spec.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="services/">Services</a>
+      <a href="work/">Work</a>
+      <a href="about/">About</a>
+      <a href="contact/">Contact</a>
+    </nav>
+    <div class="foot-contact">
+      <span class="mono">Contact</span>
+      <a href="mailto:paikanadham@gmail.com">paikanadham@gmail.com</a><br>
+      pivotalnova.com<br>
+      UK · Canada · US — remote-first, worldwide
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 Pivotal Nova</span>
+    <span>Spec Nº 001 — Plotted &amp; built by Pivotal Nova</span>
+  </div>
+</footer>
+
+<script>
+// Motion verb: plot — sections are plotted in on scroll.
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Signature moment: services index swaps the spec panel.
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.svc-row'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.spec-panel'));
+  function activate(id){
+    rows.forEach(function(r){ r.classList.toggle('active', r.getAttribute('data-target') === id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.id === id); });
+  }
+  rows.forEach(function(r){
+    var id = r.getAttribute('data-target');
+    r.addEventListener('mouseenter', function(){ activate(id); });
+    r.addEventListener('focus', function(){ activate(id); });
+    r.addEventListener('click', function(ev){ ev.preventDefault(); activate(id); });
+  });
+})();
+</script>
+</body>
+</html>
