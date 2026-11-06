@@ -1,145 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About &amp; Process — Pivotal Nova | The Studio and How a Build Runs</title>
-<meta name="description" content="Who Pivotal Nova is and how a build runs: Discover, First build, Review & refine, Launch & grow. A remote-first software studio working across the UK, Canada, the US and worldwide.">
+<title>About & Process — The Studio and How a Build Runs | Pivotal Nova</title>
+<meta name="description" content="Pivotal Nova is a remote-first software studio building websites, web apps and mobile apps for clients in the UK, Canada and the US. One promise runs everything: you see it before you pay.">
 <link rel="canonical" href="https://pivotalnova.com/about/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About &amp; Process — Pivotal Nova">
-<meta property="og:description" content="A studio that plots before it builds — and builds your first version before you pay anything.">
+<meta property="og:title" content="About & Process | Pivotal Nova">
+<meta property="og:description" content="A remote-first studio, one build-first promise, and a process with no surprises: discover, first build, review, launch.">
 <meta property="og:url" content="https://pivotalnova.com/about/">
+<meta property="og:image" content="https://pivotalnova.com/assets/nova-hero.webp">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Pivotal Nova","url":"https://pivotalnova.com","email":"paikanadham@gmail.com","description":"Software development studio building websites, web apps and mobile apps for every type of brand.","areaServed":["United Kingdom","Canada","United States","Worldwide"]}
+{"@context":"https://schema.org","@type":"Organization","name":"Pivotal Nova","url":"https://pivotalnova.com/","email":"paikanadham@gmail.com","areaServed":["United Kingdom","Canada","United States"]}
 </script>
 <style>
 :root{
-  --paper:#F6F6F2; --ink:#101216; --cobalt:#2237E6; --hairline:#D8D8D0; --muted:#55575E;
-  --fd:"Space Grotesk",sans-serif; --fb:"Manrope",sans-serif; --fm:"IBM Plex Mono",monospace;
-  --max:1240px; --pad:clamp(20px,4.5vw,52px);
+  --bg:#0B0B0C; --black:#000000; --panel:#151517; --panel-2:#1D1D20;
+  --bone:#F4F1EA; --muted:#A7A49B; --amber:#F0A832; --amber-ink:#181003;
+  --r-lg:28px; --r-md:20px; --head-h:76px;
+  --font-d:'Syne',sans-serif; --font-b:'Manrope',sans-serif;
 }
-*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--fd);line-height:1.04;margin:0;font-weight:700;letter-spacing:-.01em}
-p{margin:0}
-a{color:var(--cobalt)}
-svg{display:block}
-::selection{background:var(--cobalt);color:var(--paper)}
-:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
-.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
-.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:60;font-family:var(--fm);font-size:13px}
-.skip:focus{left:12px;top:12px}
-.site-head{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--hairline)}
-.head-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:66px;display:flex;align-items:center;gap:28px}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
-.brand-name{font-family:var(--fd);font-weight:700;font-size:18px;letter-spacing:.04em}
-.brand-name em{font-style:normal;color:var(--cobalt)}
-.main-nav{display:flex;gap:26px;margin-left:auto}
-.main-nav a{font-family:var(--fm);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent}
-.main-nav a:hover{color:var(--ink)}
-.main-nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--cobalt)}
-.head-cta{margin-left:8px;background:var(--cobalt);color:var(--paper);text-decoration:none;font-family:var(--fm);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:11px 18px;white-space:nowrap}
-.head-cta:hover{background:var(--ink)}
-.sec-head{display:flex;align-items:center;gap:14px;font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
-.sec-head .plus{color:var(--cobalt);font-size:17px;line-height:1}
-.sec-head b{color:var(--ink);font-weight:500}
-.sec-head::after{content:"";flex:1;height:1px;background:var(--hairline)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cobalt);color:var(--paper);text-decoration:none;font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:15px 26px;border:1px solid var(--cobalt);cursor:pointer}
-.btn:hover{background:var(--ink);border-color:var(--ink)}
-section.block{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--hairline)}
-.grid-bg{background-image:linear-gradient(to right,rgba(16,18,22,.055) 1px,transparent 1px),linear-gradient(to bottom,rgba(16,18,22,.055) 1px,transparent 1px);background-size:44px 44px}
-.plusmark{position:absolute;font-family:var(--fm);color:var(--cobalt);font-size:18px;line-height:1;user-select:none}
-.page-head{position:relative;padding:clamp(48px,7vw,80px) 0 clamp(40px,5vw,56px);border-bottom:1px solid var(--hairline);overflow:hidden}
-.page-head h1{font-size:clamp(2.6rem,6.4vw,4.8rem);max-width:16ch}
-.page-head .lede{color:var(--muted);max-width:60ch;margin-top:20px;font-size:clamp(1.02rem,1.5vw,1.18rem)}
-.page-head .lede strong{color:var(--ink)}
-/* editorial */
-.ed{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,76px)}
-.ed .col-label{font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:14px}
-.ed h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:16px}
-.ed p{color:var(--muted);margin-bottom:14px}
-.ed p strong{color:var(--ink)}
-.ed-facts{margin-top:22px;border-top:1px solid var(--ink)}
-.ed-facts .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--hairline);font-size:15px}
-.ed-facts .row span:first-child{font-family:var(--fm);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-/* principles */
-.prin{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
-.prin div{padding:24px 26px 10px 0;border-right:1px solid var(--hairline)}
-.prin div:last-child{border-right:0;padding-left:26px}
-.prin div:nth-child(2){padding-left:26px}
-.prin .k{font-family:var(--fm);font-size:12px;letter-spacing:.16em;color:var(--cobalt);text-transform:uppercase}
-.prin h3{font-size:1.3rem;margin:10px 0 8px}
-.prin p{color:var(--muted);font-size:15.5px}
-/* timeline */
-.timeline{position:relative;margin-left:14px;border-left:1px solid var(--ink);padding-left:clamp(28px,4vw,52px)}
-.tstep{position:relative;padding:0 0 44px}
-.tstep:last-child{padding-bottom:4px}
-.tstep::before{content:"+";position:absolute;left:calc(-1 * clamp(28px,4vw,52px) - 8px);top:2px;font-family:var(--fm);font-size:17px;color:var(--cobalt);background:var(--paper);line-height:1;padding:2px 0}
-.tstep .n{font-family:var(--fm);font-size:12px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
-.tstep h3{font-size:clamp(1.5rem,2.8vw,2.1rem);margin:8px 0 10px}
-.tstep p{color:var(--muted);max-width:62ch}
-.tstep p strong{color:var(--ink)}
-.tstep .out{margin-top:12px;font-family:var(--fm);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
-.tstep .out b{color:var(--cobalt);font-weight:500}
-/* markets */
-.markets{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
-.markets div{padding:26px 24px;border-right:1px solid var(--hairline)}
-.markets div:last-child{border-right:0}
-.markets .m{font-family:var(--fd);font-weight:700;font-size:1.4rem}
-.markets .d{font-family:var(--fm);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.cta-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
-.cta-band h2{font-size:clamp(1.9rem,4vw,3rem);max-width:20ch}
-.site-foot{background:var(--paper)}
-.foot-marks{display:flex;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px var(--pad) 0;font-family:var(--fm);color:var(--cobalt);font-size:16px}
-.foot-in{max-width:var(--max);margin:0 auto;padding:26px var(--pad) 8px;display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:36px}
-.foot-in .fb-name{font-family:var(--fd);font-weight:700;font-size:20px;letter-spacing:.04em}
-.foot-in .fb-name em{font-style:normal;color:var(--cobalt)}
-.foot-in p{color:var(--muted);font-size:15px;margin-top:8px;max-width:34ch}
-.foot-nav{display:flex;flex-direction:column;gap:9px}
-.foot-nav a{font-family:var(--fm);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none}
-.foot-nav a:hover{color:var(--cobalt)}
-.foot-contact{font-size:15px;color:var(--muted)}
-.foot-contact .mono{font-family:var(--fm);display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:var(--ink)}
-.foot-contact a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--cobalt)}
-.foot-base{max-width:var(--max);margin:26px auto 0;padding:16px var(--pad) 26px;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+body{background:var(--bg);color:var(--bone);font-family:var(--font-b);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1320px,calc(100% - 3rem));margin-inline:auto}
+.display{font-family:var(--font-d);font-weight:800;text-transform:uppercase;line-height:.98;letter-spacing:-.01em}
+.outline-text{color:transparent;-webkit-text-stroke:2px var(--bone)}
+@supports not (-webkit-text-stroke:2px black){.outline-text{color:var(--bone)}}
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;font-weight:700;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--amber)}
+.lead{color:var(--muted);font-size:1.13rem;max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--amber);color:var(--amber-ink);font-weight:800;font-size:1rem;padding:1.02rem 2rem;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-2px);background:#FFB63E}
+.btn.ghost{background:transparent;color:var(--bone);box-shadow:inset 0 0 0 1.5px rgba(244,241,234,.35)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--amber);color:var(--amber);background:transparent}
+.section{padding:clamp(5rem,10vw,8.5rem) 0}
+.sec-head{max-width:820px}
+.sec-head h2{font-size:clamp(2.5rem,5.6vw,4.6rem);margin:1.1rem 0 1.2rem}
+.page-head{padding:clamp(4.5rem,9vw,7.5rem) 0 clamp(3rem,6vw,4.5rem)}
+.page-head h1{font-size:clamp(3rem,8vw,7rem);margin:1.4rem 0 1.4rem}
+.panel{background:var(--panel);border-radius:var(--r-lg);padding:clamp(1.8rem,4vw,3rem)}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.65,.25,1)}
 .js .reveal.in{opacity:1;transform:none}
-@media (max-width:960px){
-  .ed{grid-template-columns:1fr}
-  .prin{grid-template-columns:1fr}
-  .prin div{border-right:0;padding-left:0!important;border-top:1px solid var(--hairline);padding-top:20px}
-  .prin div:first-child{border-top:0}
-  .markets{grid-template-columns:1fr 1fr}
-  .markets div{border-bottom:1px solid var(--hairline)}
-  .foot-in{grid-template-columns:1fr 1fr}
-}
-@media (max-width:680px){
-  .main-nav{display:none}
-  .head-in{gap:14px}
+/* header */
+.site-head{position:sticky;top:0;z-index:60;background:var(--bg);box-shadow:0 14px 44px rgba(0,0,0,.45)}
+.head-in{display:flex;align-items:center;gap:2rem;min-height:var(--head-h);flex-wrap:wrap;padding:.6rem 0}
+.logo{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--font-d);font-weight:800;letter-spacing:.14em;font-size:1.02rem}
+.main-nav{display:flex;gap:2rem;margin-left:auto;flex-wrap:wrap}
+.main-nav a{text-decoration:none;font-weight:600;color:var(--muted);font-size:.98rem;padding:.3rem 0}
+.main-nav a:hover{color:var(--bone)}
+.main-nav a[aria-current="page"]{color:var(--amber)}
+.head-cta{margin-left:.5rem;padding:.72rem 1.5rem;font-size:.95rem}
+/* image band */
+.band{border-radius:var(--r-lg);overflow:hidden;background:var(--black)}
+.band img{width:100%;height:clamp(300px,44vw,520px);object-fit:cover;object-position:50% 18%}
+/* story */
+.story{display:flex;flex-wrap:wrap;gap:clamp(2rem,5vw,5rem)}
+.story .col{flex:1 1 340px}
+.story p{color:var(--muted);font-size:1.1rem}
+.story p + p{margin-top:1.3rem}
+.story p strong{color:var(--bone)}
+/* principles */
+.principles{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:3.2rem}
+.principle{background:var(--panel);border-radius:var(--r-lg);padding:2.2rem 2rem;flex:1 1 300px}
+.principle h3{font-family:var(--font-d);font-weight:700;text-transform:uppercase;font-size:1.35rem;line-height:1.15;margin-bottom:.7rem}
+.principle p{color:var(--muted);font-size:.99rem}
+.principle .mark{margin-bottom:1.3rem}
+/* steps */
+.steps{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:3.2rem}
+.step{background:var(--panel);border-radius:var(--r-lg);padding:2.1rem 1.9rem;flex:1 1 230px}
+.step .n{font-family:var(--font-d);font-weight:800;color:var(--amber);font-size:1.5rem}
+.step h3{font-family:var(--font-d);font-weight:700;text-transform:uppercase;font-size:1.22rem;margin:.9rem 0 .6rem;line-height:1.15}
+.step p{color:var(--muted);font-size:.99rem}
+/* markets */
+.market-row{padding:1.6rem 0}
+.market-row .m{font-size:clamp(2.4rem,6.5vw,5.2rem)}
+.market-row p{color:var(--muted);max-width:52ch;margin-top:.4rem}
+/* footer */
+.site-foot{background:#080809;padding:5.5rem 0 2.2rem;margin-top:2rem}
+.foot-top{display:flex;flex-wrap:wrap;gap:3rem;justify-content:space-between}
+.foot-brand{max-width:34ch}
+.foot-brand p{color:var(--muted);margin-top:1.1rem;font-size:.99rem}
+.foot-col h4{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);margin-bottom:1.1rem;font-weight:700}
+.foot-col a{display:block;color:var(--muted);text-decoration:none;padding:.28rem 0;font-weight:600}
+.foot-col a:hover{color:var(--bone)}
+.foot-col span{display:block;color:var(--muted);padding:.28rem 0;font-weight:600}
+.foot-giant{font-family:var(--font-d);font-weight:800;text-transform:uppercase;text-align:center;line-height:.78;font-size:clamp(6rem,24.5vw,25rem);letter-spacing:.01em;color:transparent;-webkit-text-stroke:2px rgba(244,241,234,.34);margin:3.5rem 0 2.5rem;user-select:none}
+@supports not (-webkit-text-stroke:2px black){.foot-giant{color:rgba(244,241,234,.16)}}
+.foot-base{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;color:var(--muted);font-size:.92rem}
+@media (max-width:900px){
+  .main-nav{margin-left:0;order:3;width:100%;gap:1.4rem;overflow-x:auto;padding-bottom:.4rem}
   .head-cta{margin-left:auto}
-  .markets{grid-template-columns:1fr}
-  .foot-in{grid-template-columns:1fr}
 }
-@media (prefers-reduced-motion:reduce){
+@media (max-width:760px){
+  .outline-text{-webkit-text-stroke-width:1.4px}
+  .foot-giant{-webkit-text-stroke-width:1.3px}
+}
+@media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .js .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+
 <header class="site-head">
-  <div class="head-in">
-    <a class="brand" href="../" aria-label="Pivotal Nova — home">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="23" height="23" stroke="#2237E6" stroke-width="2"/><path d="M13 6v14M6 13h14" stroke="#2237E6" stroke-width="2"/></svg>
-      <span class="brand-name">PIVOTAL <em>NOVA</em></span>
+  <div class="wrap head-in">
+    <a class="logo" href="../" aria-label="Pivotal Nova — home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+      PIVOTAL&nbsp;NOVA
     </a>
     <nav class="main-nav" aria-label="Main">
       <a href="../">Home</a>
@@ -148,143 +125,176 @@ section.block{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--hairl
       <a href="./" aria-current="page">About</a>
       <a href="../contact/">Contact</a>
     </nav>
-    <a class="head-cta" href="mailto:paikanadham@gmail.com">Email the studio</a>
+    <a class="btn head-cta" href="../contact/">Start a Project</a>
   </div>
 </header>
 
-<main id="main">
-  <div class="page-head grid-bg">
-    <span class="plusmark" style="top:14px;right:22px" aria-hidden="true">+</span>
+<main>
+  <section class="page-head">
     <div class="wrap">
-      <div class="sec-head"><span class="plus">+</span><span>About — <b>The studio &amp; the process</b></span></div>
-      <h1>A studio that plots before it builds.</h1>
-      <p class="lede">Pivotal Nova is a software development studio. No account managers, no hand-offs into the dark — <strong>you describe the business, we plot the spec, and the first version gets built before money is even discussed</strong>.</p>
+      <span class="eyebrow">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+        About the studio
+      </span>
+      <h1 class="display">A studio built<br><span class="outline-text">on one promise.</span></h1>
+      <p class="lead">You see it before you pay for it. That single rule shapes how Pivotal Nova designs, builds and launches every website, web app and mobile app.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- WHO / HOW -->
-  <section class="block">
+  <section style="padding-bottom:clamp(4rem,8vw,6rem)">
     <div class="wrap">
-      <div class="ed reveal">
-        <div>
-          <span class="col-label">/ Who we are</span>
-          <h2>Software for every type of brand</h2>
-          <p>We build <strong>websites, web apps and mobile apps</strong> for businesses of every kind — the trades, hospitality, retail, services, and everything between. If your business runs on phone calls, paper and memory, we build the system that replaces the paper.</p>
-          <p>We work <strong>remote-first</strong>: everything runs by email and video call, and your build lives on your own domain, under your own name. Our twelve concept builds in the <a href="../work/">drawing register</a> show the standard before you ever commit.</p>
-          <div class="ed-facts">
-            <div class="row"><span>Studio</span><span>Pivotal Nova</span></div>
-            <div class="row"><span>Builds</span><span>Websites · Web Apps · Mobile Apps</span></div>
-            <div class="row"><span>Based</span><span>Remote-first</span></div>
-            <div class="row"><span>Contact</span><span><a href="mailto:paikanadham@gmail.com">paikanadham@gmail.com</a></span></div>
-          </div>
+      <figure class="band reveal">
+        <img src="../assets/nova-hero.webp" alt="A golden nova burst with a white-hot core against black — the Pivotal Nova mark in light" width="1024" height="1024">
+      </figure>
+    </div>
+  </section>
+
+  <section style="padding-bottom:clamp(5rem,10vw,8.5rem)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Who we are</span>
+        <h2 class="display">Remote-first.<br>Result-obsessed<span style="color:var(--amber)">.</span></h2>
+      </div>
+      <div class="story" style="margin-top:2.6rem">
+        <div class="col reveal">
+          <p>Pivotal Nova is a <strong>software studio without a postcode</strong>. We work remotely, end to end — design, build, launch and growth handled by one studio — for clients mainly across the <strong>UK, Canada and the US</strong>, and anywhere else a good brief finds us.</p>
+          <p>We started with a frustration: businesses were being asked to pay serious money for websites and apps they'd never seen, described in language designed to confuse. Mock-ups, promises, invoices — and only at the very end, the actual thing.</p>
         </div>
-        <div>
-          <span class="col-label">/ How we work</span>
-          <h2>The risk sits with us, not you</h2>
-          <p>Most software is bought blind: pay a deposit, hope the result matches the promise. We run it the other way round. <strong>We build your first version, you review it, and you only pay if you like it.</strong></p>
-          <p>That single rule shapes everything else. Specs get plotted properly, because we are building for real from day one. Reviews are honest, because payment depends on them. And nobody is locked into a build they never wanted.</p>
-          <p>It also means we will tell you straight if something should not be built — a studio that only gets paid when a build is liked has no reason to sell you software you don’t need.</p>
+        <div class="col reveal">
+          <p>So we flipped it. <strong>We build the first version first.</strong> You open it on your phone, click through it, show it to your team. Only when you're looking at the real thing do we talk about price — one clear quote for the whole project.</p>
+          <p>It's a fairer way to buy software, and frankly a better way to make it: every decision gets tested against something real, early, while changing it is still easy.</p>
+        </div>
+      </div>
+
+      <div class="principles">
+        <div class="principle reveal">
+          <svg class="mark" width="26" height="26" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+          <h3>You see it before you pay</h3>
+          <p>The first version is built before money changes hands. No deposits on a promise, no paying for a pitch — the work makes its own case.</p>
+        </div>
+        <div class="principle reveal">
+          <svg class="mark" width="26" height="26" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+          <h3>One studio, start to finish</h3>
+          <p>Design, copy, build, launch and growth sit under one roof. Nothing gets lost between freelancers, and you're never the messenger on your own project.</p>
+        </div>
+        <div class="principle reveal">
+          <svg class="mark" width="26" height="26" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+          <h3>Built to be found</h3>
+          <p>SEO, AEO and GEO go into every build from day one — so customers find you in Google, in local search, and in the answers AI tools give them.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRINCIPLES -->
-  <section class="block">
+  <section style="padding-bottom:clamp(5rem,10vw,8.5rem)">
     <div class="wrap">
-      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 02 — <b>Studio principles</b></span></div>
-      <div class="prin reveal">
-        <div><span class="k">/ P1 — Plot first</span><h3>Spec before code</h3><p>Every build starts as a written spec — pages, features, integrations — agreed before a line of code. No surprises mid-build.</p></div>
-        <div><span class="k">/ P2 — Build first</span><h3>Charge second</h3><p>The first version is built before you pay anything. Our work has to earn the invoice, not the other way round.</p></div>
-        <div><span class="k">/ P3 — Honest by default</span><h3>No invented proof</h3><p>We never fake reviews, stats or logos — not on this site, and not on yours. Proof is earned, then displayed.</p></div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">The process</span>
+        <h2 class="display">Four steps.<br>No surprises<span style="color:var(--amber)">.</span></h2>
       </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="block">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 03 — <b>The process, plotted</b></span></div>
-      <div class="timeline reveal">
-        <div class="tstep">
-          <span class="n">Step / 01</span>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="n">01</div>
           <h3>Discover</h3>
-          <p>We learn your business properly: what you sell, who it is for, how the day actually runs, and <strong>what the software has to do</strong>. This conversation becomes the spec — the drawing everything else is built from.</p>
-          <p class="out">Output — <b>A written spec you can check</b></p>
+          <p>A short conversation about your business and what the build has to do.</p>
         </div>
-        <div class="tstep">
-          <span class="n">Step / 02</span>
+        <div class="step reveal">
+          <div class="n">02</div>
           <h3>First build</h3>
-          <p>We build the first working version against that spec — the real design, the real features, your name on it. <strong>Not a mock-up, not a sales deck.</strong> A thing you can open, tap through and judge.</p>
-          <p class="out">Output — <b>A working first version, live for review</b></p>
+          <p>The first version, designed and built, live on a link you can open anywhere.</p>
         </div>
-        <div class="tstep">
-          <span class="n">Step / 03</span>
+        <div class="step reveal">
+          <div class="n">03</div>
           <h3>Review &amp; refine</h3>
-          <p>You review it properly — on your phone, on your desktop, with your customers in mind. We refine until it is right. <strong>This is the point where you decide: like it, and we proceed; don’t, and you owe nothing.</strong></p>
-          <p class="out">Output — <b>Your decision, with zero risk taken</b></p>
+          <p>You review the real thing, we refine it, and only then do you decide.</p>
         </div>
-        <div class="tstep">
-          <span class="n">Step / 04</span>
+        <div class="step reveal">
+          <div class="n">04</div>
           <h3>Launch &amp; grow</h3>
-          <p>The build goes live on your own domain. Then it keeps growing — refinements as your business changes, and <strong>SEO, AEO and GEO</strong> work so customers keep finding you in Google, in search and in AI answers.</p>
-          <p class="out">Output — <b>Live software that keeps earning</b></p>
+          <p>Launch on your domain, then keep growing your visibility and your features.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MARKETS -->
-  <section class="block" style="border-bottom:0">
+  <section style="padding-bottom:clamp(5rem,10vw,8.5rem)">
     <div class="wrap">
-      <div class="sec-head reveal"><span class="plus">+</span><span>Sec. 04 — <b>Where we work</b></span></div>
-      <div class="markets reveal">
-        <div><span class="m">United Kingdom</span><span class="d" style="display:block">Remote delivery</span></div>
-        <div><span class="m">Canada</span><span class="d" style="display:block">Remote delivery</span></div>
-        <div><span class="m">United States</span><span class="d" style="display:block">Remote delivery</span></div>
-        <div><span class="m">Worldwide</span><span class="d" style="display:block">Remote-first studio</span></div>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Where we work</span>
+        <h2 class="display">Three home<br>markets<span style="color:var(--amber)">.</span></h2>
       </div>
-      <div class="cta-band reveal" style="margin-top:52px">
-        <h2>Start at step one. It costs an email.</h2>
-        <a class="btn" href="../contact/">Start a project</a>
+      <div class="reveal" style="margin-top:2rem">
+        <div class="market-row">
+          <div class="display m">United <span class="outline-text">Kingdom</span></div>
+          <p>From independent shops to growing service brands — websites and apps that compete well beyond their postcode.</p>
+        </div>
+        <div class="market-row">
+          <div class="display m">Canada</div>
+          <p>Coast to coast, in English and French markets alike — builds that feel local because they're written for the people reading them.</p>
+        </div>
+        <div class="market-row">
+          <div class="display m">United <span class="outline-text">States</span></div>
+          <p>Ambitious brands in the world's most competitive market, with software that has to earn every click it gets.</p>
+        </div>
+        <p class="lead" style="margin-top:1.6rem">Remote-first means the studio travels well: if you're outside these three, the process works exactly the same way.</p>
       </div>
+      <a class="btn reveal" href="../contact/" style="margin-top:2.8rem">Start a project</a>
     </div>
   </section>
 </main>
 
 <footer class="site-foot">
-  <div class="foot-marks" aria-hidden="true"><span>+</span><span>+</span><span>+</span></div>
-  <div class="foot-in">
-    <div>
-      <span class="fb-name">PIVOTAL <em>NOVA</em></span>
-      <p>A software development studio. Websites, web apps and mobile apps — plotted, built and shipped to spec.</p>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="../" aria-label="Pivotal Nova — home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#F0A832" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+          PIVOTAL&nbsp;NOVA
+        </a>
+        <p>A software studio building websites, web apps and mobile apps for brands that mean business.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="../services/">Services</a>
+        <a href="../work/">Work</a>
+        <a href="./">About</a>
+        <a href="../contact/">Start a Project</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:paikanadham@gmail.com">paikanadham@gmail.com</a>
+        <a href="https://pivotalnova.com/">pivotalnova.com</a>
+      </div>
+      <div class="foot-col">
+        <h4>Markets</h4>
+        <span>United Kingdom</span>
+        <span>Canada</span>
+        <span>United States</span>
+        <span>Remote-first, worldwide</span>
+      </div>
     </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <a href="../">Home</a>
-      <a href="../services/">Services</a>
-      <a href="../work/">Work</a>
-      <a href="./">About</a>
-      <a href="../contact/">Contact</a>
-    </nav>
-    <div class="foot-contact">
-      <span class="mono">Contact</span>
-      <a href="mailto:paikanadham@gmail.com">paikanadham@gmail.com</a><br>
-      pivotalnova.com<br>
-      UK · Canada · US — remote-first, worldwide
+    <div class="foot-giant" aria-hidden="true">NOVA</div>
+    <div class="foot-base">
+      <span>© 2026 Pivotal Nova. All rights reserved.</span>
+      <span>Build first. Pay when you love it.</span>
     </div>
-  </div>
-  <div class="foot-base">
-    <span>© 2026 Pivotal Nova</span>
-    <span>Spec Nº 001 — Plotted &amp; built by Pivotal Nova</span>
   </div>
 </footer>
 
 <script>
 (function(){
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function(el){ io.observe(el); });
+  }
 })();
 </script>
 </body>
